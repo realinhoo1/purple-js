@@ -37,4 +37,4 @@ function converterCurrency(sum, currency = 'USD', targetСurrency) {
 
 }
 
-console.log(converterCurrency(100, 'CNY'));
+console.log(converterCurrency(100, 'RUB'));
