@@ -10,29 +10,31 @@
 
 
 function crypto (password) {
+
   const breakPassword = password.split('');
   const reversePass = breakPassword.reverse();
-  
-  const splicePass = reversePass.splice(0, 4);
-  
-  const joinPass =  splicePass.join('');
-  
-  
-  return console.log(joinPass);
+  const firstPartPass = reversePass.slice(0, 4);
+  const secondPartPass = reversePass.slice(4);
+  const newArray = secondPartPass.concat(firstPartPass);
+
+  return newArray.join('');
 }
 
-crypto('password');
 
-function decryptor (changedPass, password) {
 
-  const breakNewPassword = changedPass.split('');
-  const reverseNewPass = breakNewPassword.reverse();
-  const joinNewPass = reverseNewPass.join('');
-  
-  if (password === joinNewPass) {
-    return console.log(true);
+
+function decryptor (encryptedPass, password) {
+  const breakNewPassword = encryptedPass.split('');
+
+  const firstPartPass = breakNewPassword.slice(0, 4);
+  const secondPartPass = breakNewPassword.slice(4);
+  const newArray = secondPartPass.concat(firstPartPass);
+  const decryotedPassword = newArray.reverse().join('');
+
+  if (decryotedPassword === password) {
+      return true;
   }
-  return console.log(false);
-}
 
-decryptor('drowssap', 'password');
+  return false;
+}
+console.log(decryptor('ssapdrow', 'password'));
