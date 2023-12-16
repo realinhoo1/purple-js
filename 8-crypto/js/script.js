@@ -36,18 +36,3 @@ function decryptor (changedPass, password) {
 }
 
 decryptor('drowssap', 'password');
-
-
-for (let i = 10; i > 0; i--) {
-  console.log(i);
-}
-
-const omgArr = ['Задача 1', 'Задача 2', 'Задача 3'];
-
-for (let i = 0; i < omgArr.length; i++) {
-  if (omgArr[i] === 'Задача 2') {
-    continue;
-  }
-  
-  console.log(omgArr[i]);
-}
