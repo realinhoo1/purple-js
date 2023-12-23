@@ -75,7 +75,7 @@ console.log(getExchagePrice(1, 2, 10))
 function computeCredit(age, hasJob = false) {
   if (age >= 24 && hasJob === true ) {
     return 500;
-  } else if(age >= 24 && hasJob === false) {
+  } else if (age >= 24 && hasJob === false) {
     return 100;
   } else {
     return 0;

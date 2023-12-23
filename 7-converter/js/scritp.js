@@ -21,15 +21,15 @@ function converterCurrency(sum, currency = 'USD', targetСurrency) {
   switch(true){
     case currency === 'RUB':
       targetСurrency = sum / USD;
-      return  `${targetСurrency} $`;
+      return  targetСurrency;
 
     case currency === 'EUR':
       targetСurrency = (sum * EUR) / USD;
-      return `${targetСurrency} $`;
+      return targetСurrency;
 
     case currency === 'CNY':
       targetСurrency = (sum * CNY) / USD;
-      return `${targetСurrency} $`;
+      return targetСurrency;
 
     default: 
       return null;
